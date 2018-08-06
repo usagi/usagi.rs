@@ -1,6 +1,6 @@
 [package]
 name = "usagi"
-version = "0.0.0"
+version = "0.1.0"
 authors = ["Usagi Ito <usagi@WonderRabbitProject.net>"]
 license = "MIT"
 description = "Common algorithms and utilities library for Rust"
