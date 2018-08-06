@@ -1,3 +1,5 @@
+//! Math utilities
+
 pub fn clamp
   < T: PartialOrd >
   ( value: T, min: T, max: T )

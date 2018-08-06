@@ -1,3 +1,5 @@
+//! Web Mercator utilities
+
 use wgs84;
 use math::clamp;
 

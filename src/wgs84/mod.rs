@@ -1,3 +1,5 @@
+//! WGS84 geodetic system constants
+
 pub mod consts
 {
   pub const FLATTENING: f64 = 1.0 / 298.257_223_563;
