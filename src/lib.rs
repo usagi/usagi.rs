@@ -33,5 +33,14 @@ fn web_mercator()
     let ( lon1, lat1 ) = web_mercator::pixel_to_angle( px, py, lod );
     assert!( lon1 - lon0 < angle_error_tolerance );
     assert!( lat1 - lat0 < angle_error_tolerance );
+    
+    let ( tx0, ty0 ) = web_mercator::pixel_to_tile( px, py );
+    let uppers = web_mercator::to_upper_tiles( tx0, ty0 );
+    for ( utx, uty ) in uppers.iter()
+    {
+      let ( tx1, ty1 ) = web_mercator::to_lower_tile( *utx, *uty );
+      assert_eq!( tx0, tx1 );
+      assert_eq!( ty0, ty1 );
+    }
   }
 }
